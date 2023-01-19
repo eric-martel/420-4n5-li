@@ -1,3 +1,3 @@
-# 420-XXX-LI-EM
+# 420-4N5-LI-EM
 
-Gabarit de notes de cours
+Notes du cours *Couches supérieures du modèle OSI*.
