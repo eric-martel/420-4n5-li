@@ -8826,7 +8826,7 @@ Error message and password prompt
 <div created="20230120150419794" modified="20230122231020117" title="$:/state/toc/Table des matières/01 Accueil-1.03 Retour sur quelques notions--249536019">
 <pre>open</pre>
 </div>
-<div list="[[Table des matières]]" title="$:/StoryList">
+<div list="[[Table des matières]] [[1.À FAIRE]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8842,7 +8842,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li-em/NotesDeCours.html&quot;
+            &quot;text&quot;: &quot;file:///E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -8862,7 +8862,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li-em/NotesDeCours.html&quot;
+            &quot;text&quot;: &quot;/E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -8874,11 +8874,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1728&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1200&quot;
+            &quot;text&quot;: &quot;3073&quot;
         }
     }
 }</pre>
@@ -9093,14 +9093,21 @@ Le mot «serveur» a deux sens différents, selon le contexte:
 | SMTP (courriel) | Postfix, Exim, MS Exchange | Thunderbird, Outlook |
 | SQL | ~MySQL/~MariaDB, Orcale, MS SQL Server | ~MySQL Workbench, Oracle SQL Developer, MS SSMS |</pre>
 </div>
-<div created="20230119180521495" modified="20230122231014634" tags="[[01 Accueil]]" title="1.À FAIRE">
-<pre>Vous ''devez'' préparer l'environnement suivant sur l'[[EVP|https://evp.cegeplimoilou.ca/]], qui servira dans les prochains cours, et sur lequel nous bâtirons tout au long de la session:
+<div created="20230119180521495" modified="20230124171649093" tags="[[01 Accueil]]" title="1.À FAIRE">
+<pre># Vous ''devez'' préparer l'environnement suivant sur l'[[EVP|https://evp.cegeplimoilou.ca/]], qui servira dans les prochains cours, et sur lequel nous bâtirons tout au long de la session:
 
-# un premier serveur Windows, ''contrôleur de domaine'':
-#* utilisez l'image `fr-fr_windows_server_2022_x64_dvd_9f7d1adb.iso` disponible dans //1_ISO &gt; !ISOs &gt; !ISOs2022 &gt; OS &gt; Windows &gt; Server// sur l'EVP
-#* le nom de domaine doit être basé sur votre nom et avoir le TDN «.lan»
+## un premier serveur Windows, ''contrôleur de domaine'':
+##* utilisez l'image `fr-fr_windows_server_2022_x64_dvd_9f7d1adb.iso` disponible dans //1_ISO &gt; !ISOs &gt; !ISOs2022 &gt; OS &gt; Windows &gt; Server// sur l'EVP
+##* le nom de domaine doit être basé sur votre nom et avoir le TDN «.lan»
 
-# un second serveur Windows, ''non contrôleur'', joint au domaine ci-dessus et utilisant la même image que ci-dessus.
+## un second serveur Windows, ''non contrôleur'', joint au domaine ci-dessus et utilisant la même image que ci-dessus.
+
+#&gt; //N'oubliez pas de documenter les spécifications et configurations de vos VM!//
+
+# Configurez votre contrôleur de domaine pour être un serveur DHCP, et votre second serveur pour recevoir son adresse IP automatiquement du contrôleur de domaine.
+#&gt; ''Configurez le contrôleur afin qu'il réserve une adresse IP spécifique pour le second serveur, de sorte que ce dernier sera ssuré de toujours recevoir la même adresse.''
+
+# Reproduisez votre topologie réseau dans //Cisco Packet Tracer.//
 
 &lt;p class=&quot;boite important&quot;&gt;
 
