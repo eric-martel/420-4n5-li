@@ -191,6 +191,10 @@ Error message and password prompt
 
 <li>2.04 SQL Server Management Studio (SSMS)</li>
 
+<li>2.05 Authentification</li>
+
+<li>2.06 Rôles et permissions</li>
+
 <li>2.À FAIRE</li>
 
 <li>css</li>
@@ -8848,7 +8852,7 @@ Error message and password prompt
 <div created="20230120150419794" modified="20230122231020117" title="$:/state/toc/Table des matières/01 Accueil-1.03 Retour sur quelques notions--249536019">
 <pre>open</pre>
 </div>
-<div list="[[Table des matières]] [[2.02 Spécifications techniques]] [[2.01 Introduction]]" title="$:/StoryList">
+<div list="[[Table des matières]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8905,7 +8909,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210822182352824" modified="20230122230955883" title="$:/temp/search">
+<div created="20210822182352824" modified="20230130224228101" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" revision="0" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
@@ -9217,18 +9221,82 @@ Le mot «serveur» a deux sens différents, selon le contexte:
 
 &lt;/p&gt;</pre>
 </div>
-<div created="20230129220601940" modified="20230130015352760" tags="[[Semaine 02 - MS SQL Server]]" title="2.04 SQL Server Management Studio (SSMS)">
+<div created="20230129220601940" modified="20230130221427053" tags="[[Semaine 02 - MS SQL Server]]" title="2.04 SQL Server Management Studio (SSMS)">
 <pre>* L'équivalent Microsoft de //~MySQL ~WorkBench// et //Oracle SQL Developer// pour interagir avec le serveur de bases de données.
 
 * Disponible sur l'EVP sous:
 *&gt; //!1_ISO &gt; !ISOs &gt; !ISOs2022 &gt; Logiciel &gt;  SSMS.iso//
 
+!! Se connecter à un serveur SQL
+
+# [img width=300 [https://i.imgur.com/YJo0Irs.png]]
+
+# [img width=400 [https://i.imgur.com/ZL4crYj.png]]&lt;br /&gt;''-- OU --''&lt;br /&gt;[img width=400 [https://i.imgur.com/bGOfCYZ.png]]
+
+# Une fois connecté, on peut sauver une connexion avec:
+#&gt; //[clic droit sur connexion] &gt; Register...//
+
+# On peut afficher les connexions sauvegardées avec:&lt;div&gt;
+
+&gt; //View &gt; Registered Servers &gt; Local Server Groups//
+
+et il suffit de double-cliquer sur une connexion sauvegardée pour se connecter.
+&lt;/div&gt;
 </pre>
+</div>
+<div created="20230130194032330" modified="20230130223712747" tags="[[Semaine 02 - MS SQL Server]]" title="2.05 Authentification">
+<pre>Durant l'installation, nous avons choisi l'authentification mixte, qui permet à la fois de se connecter à MSSS soit directement par l'intermédiaire d'un compte Windows, soit plutôt avec un nom d'usager + mot de passe définis sur le serveur SQL.
+
+De plus, toujours durant l'installation, nous avons défini deux comptes d'accès, soit un mot de passe pour le compte administrateur SQL («sa») et un compte Windows administrateur («Administrateur»).
+
+!! Ajouter des utilisateurs
+
+* Pour ajouter un utilisateur, on peut passer par SSMS en se connectant à MSSS en administrateur.
+** Il suffit alors de faire //Security &gt; Logins &gt; New Login...// pour créer un utilisateur:&lt;br /&gt;[img width=300 [https://i.imgur.com/S22fLkf.png]]
+
+* Alternativement, on peut passer par une requête SQL:&lt;div&gt;
+
+```sql
+-- Ajoute un usager Windows
+CREATE LOGIN [domaine\usager] FROM WINDOWS;
+
+-- Crée un usager juste pour MSSS
+CREATE LOGIN [usager] WITH PASSWORD ='mot de passe';
+```
+&lt;p class=&quot;boite important&quot;&gt;
+
+!! Les crochets ''[ ]'' sont importants dans le code SQL ci-dessus...!
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+</pre>
+</div>
+<div created="20230130222318590" modified="20230130224111952" tags="[[Semaine 02 - MS SQL Server]]" title="2.06 Rôles et permissions">
+<pre>Si on ajoute un utilisateur à MSSS, par défaut il reçoit seulement le rôle //public// (voir ci-dessous) et aura seulement le droit de se connecter à MSSS, rien d'autre.
+
+Il faudra lui accorder un rôle ou des permissions spécifiques afin qu'il puisse effectuer les opérations nécessaires.
+
+&gt; [[Liste des rôles fixes|https://learn.microsoft.com/fr-ca/sql/relational-databases/security/authentication-access/server-level-roles?view=sql-server-ver16#fixed-server-level-roles]]
+&gt; [[Liste des autorisations spécifiques|https://learn.microsoft.com/fr-ca/sql/relational-databases/security/permissions-database-engine?view=sql-server-ver16#chart-of-sql-server-permissions]]
+
+Ainsi, le rôle //''dbcreator''// lui pemettra par exemple de créer des bases de données et des objets dans ces bases de données (tables, vues, etc.).
+
+* Pour accorder un ou des rôles à un usager, on peut passer par SSMS:
+*&gt; //[connexion] &gt; Security &gt; Logins &gt; [double-clic sur login] &gt; Server Roles//
+
+* Pour accorder une ou des permissions spécifiques, on exécutera plutôt un GRANT en SQL:&lt;div&gt;
+
+```sql
+-- Autorise un usager à visualiser les vues dynamiques système de MSSS
+GRANT VIEW SERVER STATE TO [usager];
+```
+&lt;/div&gt;</pre>
 </div>
 <div created="20230129213742939" list="" modified="20230129213927042" tags="[[Semaine 02 - MS SQL Server]]" title="2.À FAIRE">
 <pre>* TP1 (voir énoncé sur Teams)</pre>
 </div>
-<div bag="default" created="20181113131237544" modified="20230122230954729" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
+<div bag="default" created="20181113131237544" modified="20230130220030770" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre>.boite {
    background: #dddddd;
    padding: 1em;
@@ -9265,6 +9333,10 @@ Le mot «serveur» a deux sens différents, selon le contexte:
 
 li {
   margin-bottom: 0.5em;
+}
+
+img {
+  vertical-align: top;
 }
 
 pre, code {
