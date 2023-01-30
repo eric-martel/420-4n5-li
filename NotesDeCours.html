@@ -8852,7 +8852,7 @@ Error message and password prompt
 <div created="20230120150419794" modified="20230122231020117" title="$:/state/toc/Table des matières/01 Accueil-1.03 Retour sur quelques notions--249536019">
 <pre>open</pre>
 </div>
-<div list="[[Table des matières]]" title="$:/StoryList">
+<div list="[[Table des matières]] [[2.06 Rôles et permissions]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9272,7 +9272,7 @@ CREATE LOGIN [usager] WITH PASSWORD ='mot de passe';
 
 </pre>
 </div>
-<div created="20230130222318590" modified="20230130224111952" tags="[[Semaine 02 - MS SQL Server]]" title="2.06 Rôles et permissions">
+<div created="20230130222318590" modified="20230130230112284" tags="[[Semaine 02 - MS SQL Server]]" title="2.06 Rôles et permissions">
 <pre>Si on ajoute un utilisateur à MSSS, par défaut il reçoit seulement le rôle //public// (voir ci-dessous) et aura seulement le droit de se connecter à MSSS, rien d'autre.
 
 Il faudra lui accorder un rôle ou des permissions spécifiques afin qu'il puisse effectuer les opérations nécessaires.
@@ -9288,7 +9288,7 @@ Ainsi, le rôle //''dbcreator''// lui pemettra par exemple de créer des bases d
 * Pour accorder une ou des permissions spécifiques, on exécutera plutôt un GRANT en SQL:&lt;div&gt;
 
 ```sql
--- Autorise un usager à visualiser les vues dynamiques système de MSSS
+-- Autorise un usager à visualiser les vues dynamiques système (DMV) de MSSS
 GRANT VIEW SERVER STATE TO [usager];
 ```
 &lt;/div&gt;</pre>
