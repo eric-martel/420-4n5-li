@@ -161,6 +161,8 @@ Error message and password prompt
 
 <li>$:/state/toc/Table des matières-Semaine 03 - MS SQL Server (suite)--249536019</li>
 
+<li>$:/state/toc/Table des matières-Semaine 04 - MS SQL Server (suite)--249536019</li>
+
 <li>$:/state/toc/Table des matières/01 Accueil-1.03 Retour sur quelques notions--249536019</li>
 
 <li>$:/state/toc/Table des matières/Semaine 01 - Accueil-1.03 Retour sur quelques notions--249536019</li>
@@ -205,6 +207,10 @@ Error message and password prompt
 
 <li>3.À FAIRE</li>
 
+<li>4.01 Copies de sécurité</li>
+
+<li>4.À FAIRE</li>
+
 <li>css</li>
 
 <li>Glossaire</li>
@@ -216,6 +222,8 @@ Error message and password prompt
 <li>Semaine 02 - MS SQL Server</li>
 
 <li>Semaine 03 - MS SQL Server (suite)</li>
+
+<li>Semaine 04 - MS SQL Server (suite)</li>
 
 <li>Table des matières</li>
 
@@ -8856,7 +8864,7 @@ Error message and password prompt
 <div created="20230119190557285" modified="20230119190557285" title="$:/state/toc/Table des matières-01 Accueil--249536019">
 <pre>open</pre>
 </div>
-<div created="20230210145820507" modified="20230210150411986" title="$:/state/toc/Table des matières-Semaine 01 - Accueil--249536019">
+<div created="20230210145820507" modified="20230210150507962" title="$:/state/toc/Table des matières-Semaine 01 - Accueil--249536019">
 <pre>close</pre>
 </div>
 <div created="20230129213933596" modified="20230206114632587" title="$:/state/toc/Table des matières-Semaine 02 - MS SQL Server--249536019">
@@ -8865,13 +8873,16 @@ Error message and password prompt
 <div created="20230206114635210" modified="20230206114635210" title="$:/state/toc/Table des matières-Semaine 03 - MS SQL Server (suite)--249536019">
 <pre>open</pre>
 </div>
+<div created="20230210193909095" modified="20230210193909095" title="$:/state/toc/Table des matières-Semaine 04 - MS SQL Server (suite)--249536019">
+<pre>open</pre>
+</div>
 <div created="20230120150419794" modified="20230122231020117" title="$:/state/toc/Table des matières/01 Accueil-1.03 Retour sur quelques notions--249536019">
 <pre>open</pre>
 </div>
 <div created="20230210145823557" modified="20230210145823557" title="$:/state/toc/Table des matières/Semaine 01 - Accueil-1.03 Retour sur quelques notions--249536019">
 <pre>open</pre>
 </div>
-<div list="[[Table des matières]]" title="$:/StoryList">
+<div list="[[Table des matières]] [[3.À FAIRE]] [[4.01 Copies de sécurité]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8887,7 +8898,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -8907,7 +8918,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -8919,11 +8930,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1728&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;3073&quot;
+            &quot;text&quot;: &quot;1200&quot;
         }
     }
 }</pre>
@@ -9322,6 +9333,44 @@ GRANT VIEW SERVER STATE TO [usager];
 ## Essayez d'importer dans SQL Server la base de données //adventure-works// fournie [[ici|https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/adventure-works]] (fichiers du dossier //oltp//).
 ## Explorez par vous-mêmes comment vous pourriez mettre en place une stratégie de copie de sécurité des données contenues sur MSSS (il y a au moins quatre stratégies différentes possibles).</pre>
 </div>
+<div created="20230210194504232" modified="20230213020304952" tags="[[Semaine 04 - MS SQL Server (suite)]]" title="4.01 Copies de sécurité">
+<pre>Il existe plusieurs stratégies pour obtenir une copie de sécurité des données et/ou de la structure d'un SGBD:
+
+# ''en utilisant un outil de copie de sécurité dédié à cette fin'';
+
+# ''par exportation à l'aide d'un outil:'' la plupart des SGBD offrent des outils permettant d'extraire les données sous un format de notre choix, notamment sous forme de script SQL contenant toutes les commandes DDL et DML nécessaires pour reconstruire le ou les schémas exportés, mais aussi p.ex. sous format CSV, JSON, XML, etc.;
+
+# ''par copie des fichiers du SGBD:'' peu importe le SGBD, les données doivent nécessairement être contenues à la base dans des fichiers quelque part sur un disque: on peut donc en principe faire une copie des données en effectuant une copie physique de ces fichiers;
+#&gt; //ATTENTION! Afin de préserver l'intégrité des données, il faut habituellement s'assurer que le SGBD est à l'arrêt ou dans un état de maintenance avant de copier les fichiers.//
+
+# ''par requête SQL manuelle:'' on peut extraire les données sous un format désiré avec un ou des SELECT appropriés; cette méthode est surtout utile pour obtenir des données spécifiques.
+
+Plus spécifiquement, [[dans MSSS|https://learn.microsoft.com/fr-ca/sql/relational-databases/backup-restore/backup-overview-sql-server?view=sql-server-ver16]]:
+
+* dans SSMS, plusieurs options de copie et d'exportation existents avec le menu contextuel //schéma &gt; Tasks//;
+
+* on peut effectuer une copie de sécurité native SQL Server avec la commande T-SQL [[BACKUP|https://learn.microsoft.com/en-us/sql/t-sql/statements/backup-transact-sql?view=sql-server-ver16]] ou encore [[avec SSMS|https://learn.microsoft.com/fr-ca/sql/relational-databases/backup-restore/quickstart-backup-restore-database?view=sql-server-ver16]] en utilisant //schéma &gt; Tasks &gt; Backup...//;
+** On peut utiliser ''SQL Server Agent'' pour [[automatiser des tâches de copie|https://www.sqlshack.com/multiple-methods-for-scheduling-a-sql-server-backup-automatically/]]
+**&gt; //Il faut alors au préalable activer le service //SQL Server Agent// sur le serveur SQL, avec //SQL Server Configuration Manager////.
+
+
+* si on désire effectuer une copie physique des fichiers, on peut obtenir la liste des fichiers de BD avec la requête suivante:&lt;div&gt;
+
+```sql
+USE master;
+
+SELECT 
+   name &quot;Nom logique&quot;, 
+   physical_name &quot;Fichier associé&quot;
+FROM
+   sys.master_files;
+```
+&lt;/div&gt;
+</pre>
+</div>
+<div created="20230210150915195" modified="20230210151009022" tags="[[Semaine 04 - MS SQL Server (suite)]]" title="4.À FAIRE">
+<pre>* TP2 (voir énoncé sur Teams)</pre>
+</div>
 <div bag="default" created="20181113131237544" modified="20230130220030770" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre>.boite {
    background: #dddddd;
@@ -9422,6 +9471,13 @@ pre, code {
 &lt;/div&gt;</pre>
 </div>
 <div created="20230206114259244" modified="20230206114332688" tags="[[Table des matières]]" title="Semaine 03 - MS SQL Server (suite)">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+
+&lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
+
+&lt;/div&gt;</pre>
+</div>
+<div created="20230210150812128" modified="20230210150907955" tags="[[Table des matières]]" title="Semaine 04 - MS SQL Server (suite)">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
 &lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
