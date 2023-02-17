@@ -151,6 +151,8 @@ Error message and password prompt
 
 <li>$:/state/showeditpreview</li>
 
+<li>$:/state/sidebar</li>
+
 <li>$:/state/toc/01 Accueil-1.03 Retour sur quelques notions-364793301</li>
 
 <li>$:/state/toc/Table des matières-01 Accueil--249536019</li>
@@ -213,6 +215,8 @@ Error message and password prompt
 
 <li>4.À FAIRE</li>
 
+<li>99 Extra</li>
+
 <li>css</li>
 
 <li>Glossaire</li>
@@ -226,6 +230,8 @@ Error message and password prompt
 <li>Semaine 03 - MS SQL Server (suite)</li>
 
 <li>Semaine 04 - MS SQL Server (suite)</li>
+
+<li>SQL Server Always On Failover Cluster Instance (FCI)</li>
 
 <li>Table des matières</li>
 
@@ -8860,6 +8866,9 @@ Error message and password prompt
 <div created="20230119180657601" modified="20230119180657601" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
+<div created="20230216134515384" modified="20230216134515384" title="$:/state/sidebar">
+<pre>no</pre>
+</div>
 <div created="20230129211634856" modified="20230129211634856" title="$:/state/toc/01 Accueil-1.03 Retour sur quelques notions-364793301">
 <pre>open</pre>
 </div>
@@ -8884,7 +8893,7 @@ Error message and password prompt
 <div created="20230210145823557" modified="20230210145823557" title="$:/state/toc/Table des matières/Semaine 01 - Accueil-1.03 Retour sur quelques notions--249536019">
 <pre>open</pre>
 </div>
-<div list="[[Table des matières]] [[4.À FAIRE]] [[4.02 Redondance]]" title="$:/StoryList">
+<div list="[[Table des matières]] [[99 Extra]] [[SQL Server Always On Failover Cluster Instance (FCI)]] [[4.02 Redondance]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8900,7 +8909,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///D:/eric.martel/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -8920,7 +8929,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/D:/eric.martel/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9370,7 +9379,7 @@ FROM
 &lt;/div&gt;
 </pre>
 </div>
-<div created="20230213210610558" modified="20230214130824405" tags="[[Semaine 04 - MS SQL Server (suite)]]" title="4.02 Redondance">
+<div created="20230213210610558" modified="20230217183047301" tags="[[Semaine 04 - MS SQL Server (suite)]]" title="4.02 Redondance">
 <pre>* La redondance en général est primordiale en informatique afin d'assurer la continuité de services prioritaires (c.-à-d. éviter les interruptions). Avec la redondance, on veut s'assurer qu'un service ou une ressource demeure disponible malgré une panne.
 
 * La redondance peut s'exercer à plusieurs niveaux: composantes réseau (deux routeurs vs un seul), périphériques (deux imprimantes vs une seule), serveurs (deux contrôleurs de domaine vs un seul), etc.
@@ -9379,11 +9388,51 @@ FROM
 
 * Dans le cas des SGBD, un mécanisme de redondance souvent utilisé est la ''réplication'' ou l'''écriture en miroir'' (//mirroring//), qui est une sorte de copie de sécurité en temps réel: chaque opération effectuée sur un serveur principal est automatiquement et immédiatement répliquée sur un serveur de relève. Cette approche a cependant l'inconvénient de ne pas offrir un service ininterrompu en cas de panne du serveur principal, puisqu'on devra dans ce cas manuellement modifier la configuration du système afin de changer le serveur de relève en serveur principal.
 
-* Avec MS SQL Server, la réplication a été abandonnée par Microsoft au profit de sa technologie //[[Always On availability groups|https://learn.microsoft.com/fr-ca/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver16]]//, qui utilise elle-même la technologie de redondance //[[Windows Server Failover Cluster (WSFC)|https://learn.microsoft.com/fr-ca/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server?view=sql-server-ver16]]//.&lt;br&gt;[img[https://learn.microsoft.com/fr-ca/sql/database-engine/availability-groups/windows/media/aoag-agintrofigure.gif?view=sql-server-ver16]].</pre>
+* Avec MS SQL Server, la réplication a été abandonnée par Microsoft au profit de sa technologie //[[Always On availability groups|https://learn.microsoft.com/fr-ca/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver16]]//, qui utilise elle-même la technologie de redondance par grappe //[[Windows Server Failover Cluster (WSFC)|https://learn.microsoft.com/fr-ca/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server?view=sql-server-ver16]]//.&lt;br&gt;[img[https://learn.microsoft.com/fr-ca/sql/database-engine/availability-groups/windows/media/aoag-agintrofigure.gif?view=sql-server-ver16]].
+
+!! Créer une grappe (//cluster//) WSFC
+
+# Avant toute chose, [[préparer un stockage partagé iSCSI|https://www.sqlshack.com/installing-and-configuring-the-iscsi-target-server-on-windows-server-2016/]] et [[connectez votre cible|https://www.sqlshack.com/how-to-configure-an-iscsi-initiator-on-windows-server-2016/]] sur un serveur indépendant (ou, au pire, sur votre contrôleur de domaine) qui servira de NAS (stockage réseau).&lt;div&gt;
+
+En résumé, avec quelques notes importantes:
+
+&gt;* Le serveur de stockage (qui jouera le rôle d'un NAS) est appelé ''Serveur cible iSCSI''; la 1re étape est d'activer ce rôle sur le serveur Windows qui servira de NAS.
+
+&gt;* Durant la configuration du service iSCSI, on devra ajouter au moins une ''cible iSCSI'', à laquelle on devra ajouter ou ou des initiateurs: un ''initiateur'' est une machine client qui aura le droit de se connecter au service; le plus efficace est d'utiliser soit un IQN, soit une adresse IP statique pour identifier l'initiateur (l'IQN est défini dans l'onglet //Configuration// des propriétés de l'initiateur iSCSI du client - voir étape 3 ci-dessous). ''En premier lieu, ajouter au moins le serveur NAS lui-même comme initiateur.''
+
+&gt;* Une fois la cible créée et le NAS ajouté comme initiateur, vous irez dans le gestionnaire de serveur sous //Outils &gt; Initiateur iSCSI// afin de connecter la cible: cela pour effet d'ajouter un nouveau disque local à votre NAS.
+
+&gt;* Allez ensuite dans le gestionnaire de disques de Windows (//Créer et formater des partitions de disque dur//), trouvez votre nouveau disque et mettez-le en ligne + initialisez + formatez NTFS: votre disque partagé devrait maintenant apparaître dans //Ce PC// et être disponible pour y créer des fichiers!
+
+!!! Autres liens pour la création du NAS:
+
+* https://msftwebcast.com/2020/02/install-and-configure-iscsi-target-in-windows-server-2019.html
+* https://msftwebcast.com/2020/02/configure-iscsi-initiator-in-windows-server-2019.html
+&lt;/div&gt;
+
+# Ensuite, préparez deux serveurs Windows ''non contrôleurs'' qui seront identiques en matière matérielle et configuration générale et qui seront destinés à être des noeuds dans la grappe. Si vous avez déjà un serveur SQL d'installé, il pourra être votre premier noeud.
+
+# Une fois votre NAS prêt, vous pouvez configurer une grappe WSFC en suivant les trois étapes ci-dessous avec vos deux noeuds:
+#* [[Étape 1|https://www.1e.com/blogs/creating-a-windows-cluster-using-iscsi-to-connect-to-shared-storage/]]
+#* [[Étape 2|https://www.1e.com/blogs/creating-a-windows-cluster-part-2-configuring-shared-disk-in-the-os/]]
+#* [[Étape 3|https://www.1e.com/blogs/creating-a-windows-cluster-part-3-creating-a-windows-failover-cluster/]]
+
+#&gt; Avant de créer la grappe, n'oubliez pas d'ajouter chacun de vos noeuds dans les initiateurs de la cible sur le NAS!
+
+!! Créer un groupe de disponibilité //Always On// pour SQL Server
+
+https://learn.microsoft.com/fr-ca/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio?view=sql-server-ver16
+
+https://www.sqlservercentral.com/articles/steps-for-installing-alwayson-availability-groups-sql-2019
+
+</pre>
 </div>
 <div created="20230210150915195" modified="20230214181915014" tags="[[Semaine 04 - MS SQL Server (suite)]]" title="4.À FAIRE">
 <pre>* TP2 (voir énoncé sur Teams)
 * Préparation à la partie 2 du TP2: à partir des liens fournis à la [[section 4.02|4.02 Redondance]] et d'autres liens que vous pourriez trouver sur Internet, tentez d'ajouter votre serveur SQL à un groupe //Always On//. Il vous faudra d'abord lire et comprendre comment créer un WSFC.</pre>
+</div>
+<div created="20230217183059567" modified="20230217183128639" tags="[[Table des matières]]" title="99 Extra">
+<pre>&lt;&lt;enfants&gt;&gt;</pre>
 </div>
 <div bag="default" created="20181113131237544" modified="20230130220030770" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre>.boite {
@@ -9497,6 +9546,38 @@ pre, code {
 &lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
 
 &lt;/div&gt;</pre>
+</div>
+<div created="20230217183132032" modified="20230217183434343" tags="[[99 Extra]]" title="SQL Server Always On Failover Cluster Instance (FCI)">
+<pre>!! Créer une grappe (//cluster//) WSFC pour FCI (//Failover Cluster Instance//)
+
+# Avant toute chose, [[préparer un stockage partagé iSCSI|https://www.sqlshack.com/installing-and-configuring-the-iscsi-target-server-on-windows-server-2016/]] et [[connectez votre cible|https://www.sqlshack.com/how-to-configure-an-iscsi-initiator-on-windows-server-2016/]] sur un serveur indépendant (ou, au pire, sur votre contrôleur de domaine) qui servira de NAS (stockage réseau).&lt;div&gt;
+
+En résumé, avec quelques notes importantes:
+
+&gt;* Le serveur de stockage (qui jouera le rôle d'un NAS) est appelé ''Serveur cible iSCSI''; la 1re étape est d'activer ce rôle sur le serveur Windows qui servira de NAS.
+
+&gt;* Durant la configuration du service iSCSI, on devra ajouter au moins une ''cible iSCSI'', à laquelle on devra ajouter ou ou des initiateurs: un ''initiateur'' est une machine client qui aura le droit de se connecter au service; le plus efficace est d'utiliser soit un IQN, soit une adresse IP statique pour identifier l'initiateur (l'IQN est défini dans l'onglet //Configuration// des propriétés de l'initiateur iSCSI du client - voir étape 3 ci-dessous). ''En premier lieu, ajouter au moins le serveur NAS lui-même comme initiateur.''
+
+&gt;* Une fois la cible créée et le NAS ajouté comme initiateur, vous irez dans le gestionnaire de serveur sous //Outils &gt; Initiateur iSCSI// afin de connecter la cible: cela pour effet d'ajouter un nouveau disque local à votre NAS.
+
+&gt;* Allez ensuite dans le gestionnaire de disques de Windows (//Créer et formater des partitions de disque dur//), trouvez votre nouveau disque et mettez-le en ligne + initialisez + formatez NTFS: votre disque partagé devrait maintenant apparaître dans //Ce PC// et être disponible pour y créer des fichiers!
+
+!!! Autres liens pour la création du NAS:
+
+* https://msftwebcast.com/2020/02/install-and-configure-iscsi-target-in-windows-server-2019.html
+* https://msftwebcast.com/2020/02/configure-iscsi-initiator-in-windows-server-2019.html
+&lt;/div&gt;
+
+# Ensuite, préparez deux serveurs Windows ''non contrôleurs'' qui seront identiques en matière matérielle et configuration générale et qui seront destinés à être des noeuds dans la grappe. Si vous avez déjà un serveur SQL d'installé, il pourra être votre premier noeud.
+
+# Une fois votre NAS prêt, vous pouvez configurer une grappe WSFC en suivant les étapes ci-dessous avec vos deux noeuds:
+#* [[Étape 1|https://www.1e.com/blogs/creating-a-windows-cluster-using-iscsi-to-connect-to-shared-storage/]]
+#* [[Étape 2|https://www.1e.com/blogs/creating-a-windows-cluster-part-2-configuring-shared-disk-in-the-os/]]
+#* [[Étape 3|https://www.1e.com/blogs/creating-a-windows-cluster-part-3-creating-a-windows-failover-cluster/]]
+#* [[Étape 4|https://www.1e.com/blogs/creating-a-windows-cluster-part-4-setting-up-a-sql-cluster/]]
+
+#&gt; Avant de créer la grappe, n'oubliez pas d'ajouter chacun de vos noeuds dans les initiateurs de la cible sur le NAS!
+</pre>
 </div>
 <div bag="default" caption="Contenu" created="20181113130821883" list-before="$:/core/ui/SideBar/Open" modified="20230119163823779" revision="0" tags="$:/tags/SideBar" title="Table des matières" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
