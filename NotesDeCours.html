@@ -169,6 +169,8 @@ Error message and password prompt
 
 <li>$:/state/toc/Table des matières-Semaine 06 - DNS--249536019</li>
 
+<li>$:/state/toc/Table des matières-Semaine 07 - DNS (suite)--249536019</li>
+
 <li>$:/state/toc/Table des matières-ZZ Extra--249536019</li>
 
 <li>$:/state/toc/Table des matières/01 Accueil-1.03 Retour sur quelques notions--249536019</li>
@@ -233,6 +235,10 @@ Error message and password prompt
 
 <li>6.À FAIRE</li>
 
+<li>7.01 DNS sous Linux</li>
+
+<li>7.À FAIRE</li>
+
 <li>css</li>
 
 <li>Glossaire</li>
@@ -250,6 +256,8 @@ Error message and password prompt
 <li>Semaine 05 - MS SQL Server (suite)</li>
 
 <li>Semaine 06 - DNS</li>
+
+<li>Semaine 07 - DNS (suite)</li>
 
 <li>SQL Server Always On Failover Cluster Instance (FCI)</li>
 
@@ -8888,7 +8896,7 @@ Error message and password prompt
 <div created="20230119180657601" modified="20230119180657601" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20230216134515384" modified="20230220004820491" title="$:/state/sidebar">
+<div created="20230216134515384" modified="20230306001502566" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20230129211634856" modified="20230129211634856" title="$:/state/toc/01 Accueil-1.03 Retour sur quelques notions-364793301">
@@ -8912,7 +8920,10 @@ Error message and password prompt
 <div created="20230220121234695" modified="20230226225414067" title="$:/state/toc/Table des matières-Semaine 05 - MS SQL Server (suite)--249536019">
 <pre>close</pre>
 </div>
-<div created="20230226225415201" modified="20230226225415201" title="$:/state/toc/Table des matières-Semaine 06 - DNS--249536019">
+<div created="20230226225415201" modified="20230306003844914" title="$:/state/toc/Table des matières-Semaine 06 - DNS--249536019">
+<pre>open</pre>
+</div>
+<div created="20230306000626344" modified="20230306000626344" title="$:/state/toc/Table des matières-Semaine 07 - DNS (suite)--249536019">
 <pre>open</pre>
 </div>
 <div created="20230220115452693" modified="20230220120746652" title="$:/state/toc/Table des matières-ZZ Extra--249536019">
@@ -8924,7 +8935,7 @@ Error message and password prompt
 <div created="20230210145823557" modified="20230210145823557" title="$:/state/toc/Table des matières/Semaine 01 - Accueil-1.03 Retour sur quelques notions--249536019">
 <pre>open</pre>
 </div>
-<div list="[[Table des matières]] [[6.À FAIRE]]" title="$:/StoryList">
+<div list="[[Table des matières]] [[6.02 Système DNS]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9495,11 +9506,33 @@ Linux est beaucoup plus souple et polyvalent que Windows quant à la résolution
 * Ensuite, il n'y a pas d'ordre systématique dans la résolution des noms: on peut définir les méthodes à essayer et leur ordre dans le fichier `/etc/nsswitch.conf`, et ce pour différents types de noms (pas seulement des ressources réseau, mais aussi des noms d'usagers, de groupes, etc.).
 *&gt; Dans le fichier `nsswitch.conf`, c'est la ligne ''hosts:'' qui détermine les méthodes de résolution de ressources réseau à essayer ainsi que leur ordre (priorité de gauche à droite).</pre>
 </div>
-<div created="20230226212538404" modified="20230227001903923" tags="[[Semaine 06 - DNS]]" title="6.02 Système DNS">
-<pre>* [[Présentation sur le système DNS|https://lecegeplimoilou-my.sharepoint.com/:b:/g/personal/eric_martel_cegeplimoilou_ca/ETwmVlSoq0hNgHjBHMEknbABn3aJGdMPncKe5xB7MAVQ5A?e=JwWjcf]]</pre>
+<div created="20230226212538404" modified="20230306115805019" tags="[[Semaine 06 - DNS]]" title="6.02 Système DNS">
+<pre>* [[Présentation sur le système DNS|https://lecegeplimoilou-my.sharepoint.com/:b:/g/personal/eric_martel_cegeplimoilou_ca/ETwmVlSoq0hNgHjBHMEknbABn3aJGdMPncKe5xB7MAVQ5A?e=JwWjcf]]
+
+!! Types d'entrées DNS principales pour un domaine:
+* ''A/AAAA'' : adresse IPv4 (entrée A)  ou IPv6 (entrée AAAA)
+* ''CNAME'' : un alias pour une autre entrée existante
+* ''MX'': adresse IP d'un serveur de courier électronique
+* ''NS'': (//name server//) adresse IP d'un serveur DNS faisant autorité pour le domaine
+* ''SOA'': (//Start of Authority//): nécessaire pour chaque nouvelle zone; contient différentes informations, dont notamment le nom du NS primaire pour la zone
+
+!! Commandes utiles:
+
+!!! Pour Windows et Linux:
+
+* ping
+* ''[[nslookup|https://blog.neterra.cloud/en/nslookup-command-and-10-easy-examples/]]''
+
+!!! Linux seulement:
+
+* ''[[dig|https://phoenixnap.com/kb/linux-dig-command-examples]]''
+
+* ''[[host|https://www.geeksforgeeks.org/host-command-in-linux-with-examples/]]''</pre>
 </div>
-<div created="20230226225357867" modified="20230227002247587" tags="[[Semaine 06 - DNS]]" title="6.03 DNS sous Windows">
+<div created="20230226225357867" modified="20230305234330327" tags="[[Semaine 06 - DNS]]" title="6.03 DNS sous Windows">
 <pre>* On peut [[installer et configurer le rôle DNS|https://learn.microsoft.com/fr-ca/windows-server/networking/dns/quickstart-install-configure-dns-server?tabs=gui]] à partir du gestionnaire de serveur de Windows server.
+
+[img width=&quot;800&quot; [https://i.imgur.com/RGcoHnZ.png]]
 
 &lt;p class=&quot;boite note&quot;&gt;
 
@@ -9515,6 +9548,16 @@ Si on désire que le serveur puisse résoudre des noms en dehors de son domaine,
 <pre># Dans votre réseau sur l'EVP, créez un nouveau serveur Windows ''non contrôleur'' qui vous servira seulement de serveur DNS délégué pour l'Internet (votre contrôleur de domaine ne devra plus avoir ce rôle). Au final, tous les postes sur le réseau devront évidemment pouvoir faire des ping sur les noms du domaine et des noms de l'Internet.
 
 # Mettez à jour votre plan de réseau dans Packet Tracer.</pre>
+</div>
+<div created="20230305232932518" modified="20230306000604847" tags="[[Semaine 07 - DNS (suite)]]" title="7.01 DNS sous Linux">
+<pre>* Sous Linux et autres systèemes POSIX, le serveur DNS le plus utilisé est [[BIND 9|https://www.isc.org/bind/]].
+
+* Comme tout service POSIX, la configuration se fait dans un ou des fichiers texte contenus dans `/etc`; pour BIND 9, il s'agit de `/etc/bind`
+
+* Tutoriel d'installation et configuration sous Ubuntu: https://www.digitalocean.com/community/tutorials/how-to-configure-bind-as-a-private-network-dns-server-on-ubuntu-22-04</pre>
+</div>
+<div created="20230306000631996" modified="20230306000658819" tags="[[Semaine 07 - DNS (suite)]]" title="7.À FAIRE">
+<pre>* TP3 (voir Teams)</pre>
 </div>
 <div bag="default" created="20181113131237544" modified="20230227001620829" revision="0" tags="$:/tags/Stylesheet" title="css" type="text/css">
 <pre>.boite {
@@ -9647,6 +9690,13 @@ pre, code {
 &lt;/div&gt;</pre>
 </div>
 <div created="20230226212415859" modified="20230226212447845" tags="[[Table des matières]]" title="Semaine 06 - DNS">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+
+&lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
+
+&lt;/div&gt;</pre>
+</div>
+<div created="20230305232837980" modified="20230305232923748" tags="[[Table des matières]]" title="Semaine 07 - DNS (suite)">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
 &lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
