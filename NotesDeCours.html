@@ -175,6 +175,8 @@ Error message and password prompt
 
 <li>$:/state/toc/Table des matières-Semaine 09--249536019</li>
 
+<li>$:/state/toc/Table des matières-Semaine 10--249536019</li>
+
 <li>$:/state/toc/Table des matières-ZZ Extra--249536019</li>
 
 <li>$:/state/toc/Table des matières/01 Accueil-1.03 Retour sur quelques notions--249536019</li>
@@ -204,6 +206,10 @@ Error message and password prompt
 <li>1.03.02 Notion de client-serveur</li>
 
 <li>1.À FAIRE</li>
+
+<li>10.01 Courriel sous Linux</li>
+
+<li>10.À FAIRE</li>
 
 <li>2.01 Introduction</li>
 
@@ -272,6 +278,8 @@ Error message and password prompt
 <li>Semaine 08</li>
 
 <li>Semaine 09</li>
+
+<li>Semaine 10</li>
 
 <li>SQL Server Always On Failover Cluster Instance (FCI)</li>
 
@@ -8910,7 +8918,7 @@ Error message and password prompt
 <div created="20230119180657601" modified="20230119180657601" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20230216134515384" modified="20230306001502566" title="$:/state/sidebar">
+<div created="20230216134515384" modified="20230327125253072" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20230129211634856" modified="20230129211634856" title="$:/state/toc/01 Accueil-1.03 Retour sur quelques notions-364793301">
@@ -8946,6 +8954,9 @@ Error message and password prompt
 <div created="20230326202344950" modified="20230326202344950" title="$:/state/toc/Table des matières-Semaine 09--249536019">
 <pre>open</pre>
 </div>
+<div created="20230403094111376" modified="20230403094111376" title="$:/state/toc/Table des matières-Semaine 10--249536019">
+<pre>open</pre>
+</div>
 <div created="20230220115452693" modified="20230220120746652" title="$:/state/toc/Table des matières-ZZ Extra--249536019">
 <pre>close</pre>
 </div>
@@ -8955,7 +8966,7 @@ Error message and password prompt
 <div created="20230210145823557" modified="20230210145823557" title="$:/state/toc/Table des matières/Semaine 01 - Accueil-1.03 Retour sur quelques notions--249536019">
 <pre>open</pre>
 </div>
-<div list="[[Table des matières]] [[Semaine 09]] [[9.À FAIRE]] [[9.01 Courrier électronique (courriel)]]" title="$:/StoryList">
+<div list="[[Table des matières]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9257,6 +9268,20 @@ Le mot «serveur» a deux sens différents, selon le contexte:
 [img[https://i.imgur.com/xd9hEMp.png]]
 
 &lt;/p&gt;</pre>
+</div>
+<div created="20230403092206654" modified="20230403094106594" tags="[[Semaine 10]]" title="10.01 Courriel sous Linux">
+<pre>Alors que, sous Windows, Exchange offre un 3-en-1 (service d'expédition + services de récupération + interface Web), sous Linux ces fonctionnalités sont généralement séparées:
+
+* les deux serveurs SMTP les plus populaires sont ''[[Postfix|http://www.postfix.org/]]'' et ''[[Exim|https://www.exim.org/]]''
+
+* Un des serveurs POP/IMAP les plus populaires est ''[[Dovecot|https://www.dovecot.org/]]''
+
+* Il y a des dizaines de serveurs Webmail, mais l'un des plus populaires est ''[[Roundcube|https://roundcube.net/]]''.
+
+On peut bien sûr installer ces trois composantes individuellement, mais heureusement il existe des solution clef-en-main un peu à la manière Exchange, telles que ''[[iRedMail|https://www.iredmail.org/]]'' par exemple.</pre>
+</div>
+<div created="20230403094117986" modified="20230403094850979" tags="[[Semaine 10]]" title="10.À FAIRE">
+<pre># [[Installez iRedMail sur votre serveur Ubuntu|https://docs.iredmail.org/install.iredmail.on.debian.ubuntu.html]] existant, en vous assurant qu'il desserve son propre domaine et qu'il puisse échanger des courriels avec vos deux serveurs Exchange.</pre>
 </div>
 <div created="20230129132619428" list="" modified="20230130000454628" tags="[[Semaine 02 - MS SQL Server]]" title="2.01 Introduction">
 <pre>''MS SQL Server'' est le serveur de bases de données de Microsoft.
@@ -9583,7 +9608,7 @@ Si on désire que le serveur puisse résoudre des noms en dehors de son domaine,
 <div created="20230320110545651" modified="20230320110625480" tags="[[Semaine 08]]" title="8.À FAIRE">
 <pre># TP3</pre>
 </div>
-<div created="20230326163458795" modified="20230326202322487" tags="[[Semaine 09]]" title="9.01 Courrier électronique (courriel)">
+<div created="20230326163458795" modified="20230327131056108" tags="[[Semaine 09]]" title="9.01 Courrier électronique (courriel)">
 <pre>Il y a deux composantes principales dans un système de courrier électronique (courriel), soit:
 
 # l'expédition et le relai de courriel;
@@ -9610,6 +9635,8 @@ Les serveurs SMTP n'utilisaient autrefois que le port 25, sans authentification,
 
 * Le destinataire devra se connecter à un service de récupération POP, IMAP ou autre (p.ex., MAPI ou ~ActiveSync chez Microsoft) afin de récupérer ses courriels, ou encore une interface Web directement rattachée au système de courriel (p.ex., MS //Outlook Web Access// ou OWA). Le service de récupération roule souvent sur la même machine que le service SMTP, mais ce n'est pas obligatoire.
 
+* Ports de récupération:
+** port 
 ---
 
 &lt;p class=&quot;enbref&quot;&gt;
@@ -9788,6 +9815,13 @@ pre, code {
 &lt;/div&gt;</pre>
 </div>
 <div created="20230326163449442" modified="20230326163455624" tags="[[Table des matières]]" title="Semaine 09">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+
+&lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
+
+&lt;/div&gt;</pre>
+</div>
+<div created="20230403092157920" modified="20230403092203466" tags="[[Table des matières]]" title="Semaine 10">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
 &lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
