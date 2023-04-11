@@ -177,6 +177,8 @@ Error message and password prompt
 
 <li>$:/state/toc/Table des matières-Semaine 10--249536019</li>
 
+<li>$:/state/toc/Table des matières-Semaine 11--249536019</li>
+
 <li>$:/state/toc/Table des matières-ZZ Extra--249536019</li>
 
 <li>$:/state/toc/Table des matières/01 Accueil-1.03 Retour sur quelques notions--249536019</li>
@@ -210,6 +212,12 @@ Error message and password prompt
 <li>10.01 Courriel sous Linux</li>
 
 <li>10.À FAIRE</li>
+
+<li>11.À FAIRE</li>
+
+<li>12.01 Courriel: connexions chiffrées par SSL/TLS</li>
+
+<li>12.02 Le détournement de serveurs SMTP</li>
 
 <li>2.01 Introduction</li>
 
@@ -280,6 +288,10 @@ Error message and password prompt
 <li>Semaine 09</li>
 
 <li>Semaine 10</li>
+
+<li>Semaine 11</li>
+
+<li>Semaine 12</li>
 
 <li>SQL Server Always On Failover Cluster Instance (FCI)</li>
 
@@ -8918,7 +8930,7 @@ Error message and password prompt
 <div created="20230119180657601" modified="20230119180657601" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20230216134515384" modified="20230327125253072" title="$:/state/sidebar">
+<div created="20230216134515384" modified="20230403172337373" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20230129211634856" modified="20230129211634856" title="$:/state/toc/01 Accueil-1.03 Retour sur quelques notions-364793301">
@@ -8951,10 +8963,13 @@ Error message and password prompt
 <div created="20230320110635141" modified="20230326202346270" title="$:/state/toc/Table des matières-Semaine 08--249536019">
 <pre>close</pre>
 </div>
-<div created="20230326202344950" modified="20230326202344950" title="$:/state/toc/Table des matières-Semaine 09--249536019">
-<pre>open</pre>
+<div created="20230326202344950" modified="20230411152812795" title="$:/state/toc/Table des matières-Semaine 09--249536019">
+<pre>close</pre>
 </div>
-<div created="20230403094111376" modified="20230403094111376" title="$:/state/toc/Table des matières-Semaine 10--249536019">
+<div created="20230403094111376" modified="20230411152813630" title="$:/state/toc/Table des matières-Semaine 10--249536019">
+<pre>close</pre>
+</div>
+<div created="20230403134255198" modified="20230411152712724" title="$:/state/toc/Table des matières-Semaine 11--249536019">
 <pre>open</pre>
 </div>
 <div created="20230220115452693" modified="20230220120746652" title="$:/state/toc/Table des matières-ZZ Extra--249536019">
@@ -8966,7 +8981,7 @@ Error message and password prompt
 <div created="20230210145823557" modified="20230210145823557" title="$:/state/toc/Table des matières/Semaine 01 - Accueil-1.03 Retour sur quelques notions--249536019">
 <pre>open</pre>
 </div>
-<div list="[[Table des matières]] [[10.À FAIRE]]" title="$:/StoryList">
+<div list="[[Table des matières]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8982,7 +8997,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
+            &quot;text&quot;: &quot;file:///E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9002,7 +9017,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/e/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
+            &quot;text&quot;: &quot;/E:/Users/Eric/OneDrive%20-%20C%C3%A9gep%20Limoilou/svn/Cours/420-4N5%20CSM%20OSI/420-4n5-li/NotesDeCours.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9014,11 +9029,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;1728&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;960&quot;
+            &quot;text&quot;: &quot;3073&quot;
         }
     }
 }</pre>
@@ -9280,8 +9295,57 @@ Le mot «serveur» a deux sens différents, selon le contexte:
 
 On peut bien sûr installer ces trois composantes individuellement, mais heureusement il existe des solution clef-en-main un peu à la manière Exchange, telles que ''[[iRedMail|https://www.iredmail.org/]]'' par exemple.</pre>
 </div>
-<div created="20230403094117986" modified="20230403123039634" tags="[[Semaine 10]]" title="10.À FAIRE">
+<div created="20230403094117986" modified="20230403120353521" tags="[[Semaine 10]]" title="10.À FAIRE">
 <pre># [[Installez iRedMail sur votre serveur Ubuntu|https://docs.iredmail.org/install.iredmail.on.debian.ubuntu.html]] existant (avec ~RoundCube), en vous assurant qu'il desserve son propre domaine et qu'il puisse échanger des courriels avec vos deux serveurs Exchange.</pre>
+</div>
+<div created="20230411152644248" modified="20230411152750567" tags="[[Semaine 11]]" title="11.À FAIRE">
+<pre>* Terminer TP4 + Exercice 10.1</pre>
+</div>
+<div created="20230403124241485" list="" modified="20230411152619580" tags="[[Semaine 12]]" title="12.01 Courriel: connexions chiffrées par SSL/TLS">
+<pre>Tout comme pour les connexions HTTP et autres, on sécurisera normalement les connexions courriel afin de diminuer les risques d'une interception de type //man in the middle//. Les connexions à chiffrer sont tant entre les serveurs de relai SMTP qu'entre les serveurs et les clients. 
+
+* ''SMTP'': les connexions SMTP, peu importe le port, sont typiquement chiffrées avec TLS (le successeur de SSL, compatible avec les certificats SSL) ou SSL. Pour les connexions sur le port existant 25, puisque ce port n'est pas un port TLS dédié par défaut, le serveur établissant la connexion devra passer la commande ''STARTTLS'' afin de démarrer le chiffrement de la connexion. Les connexions sur le port 587 peuvent quant à elle être chiffrées ou non, selon la configuration du serveur, mais demanderont au minimum une authentification. Le port 465 (utilisé presque uniquement par MS-Outlook) est quant à lui un port SMTPS, c.-à-d. un port SMTP réservé pour les connexions SMTP sécurisées avec les MUA, mais n'est en pratique pratiquement pas utilisé (le port 587 lui a été préféré).&lt;p&gt;
+Compte tenu des multiples configurations de sécurité possibles sur le port 587, il est habituel de procéder à une authentification ''SASL'' sur ce port, qui est un mécanisme de négociation pour que le client et le serveurs conviennent du protocole d'authentification à utiliser.&lt;/p&gt;
+
+* ''POP/IMAP'': les ports 110 et 143 n'attendent pas de connexion chiffrée, alors que les ports 995 et 993 (POPS et IMAPS, respectivement), oui, avec SSL encore une fois.
+
+Il revient aux serveurs de déterminer quelles connexions sont acceptées et selon quels critères. Dans certains cas, un serveur //pourra// accepter des connexions sécurisées dans les imposer, et alors c'est le client qui devra imposer une connexion sécurisée s'il le désire. Si le client veut une connexion sécurisée, mais qu'elle n'est pas disponible sur le serveur, ou que le serveur exige une connexion sécurisée, mais qu'elle n'est pas supportée par le client, alors la connexion ne pourra pas se faire.</pre>
+</div>
+<div created="20230403140117819" list="" modified="20230411152629458" tags="[[Semaine 12]]" title="12.02 Le détournement de serveurs SMTP">
+<pre>Les émetteurs de pourriel (//spam//) recherchent toujours activement des moyens d'expédier leurs envois massifs.
+
+Si un spammeur monte son propre serveur SMTP sur son propre domaine à cette fin, celui-ci se fera rapidement repéré par les sites de listes de noires et sera banni et bloqué par les serveurs de courriel à travers le monde qui refuseront de relayer ses courriels.
+
+Les spammeurs sont donc toujours à la recherche de failles dans des serveurs SMTP de bonne réputation afin de les détourner à leurs fins. Voici quelques techniques utilisées par les spammeurs pour détourner des serveurs de courriel à leurs fins:
+
+* ''prise de contrôle du serveur'': évidemment, si un spammeur réussit à prendre le contrôle d'un serveur SMTP (peu importe la façon), il pourra en faire ce qu'il veut;
+
+* ''usurpation d'hôte'' (//host spoofing//): beaucoup de serveurs de courriel sont configurés pour relayer automatiquement les courriels provenant de certains hôtes de leur domaine: si un spammeur réussit à faire croire qu'il envoie les courriels à partir d'un de ces hôtes (p.ex., pas empoisonnement DNS) ou qu'il en prend le contrôle, alors il aura le champ libre;
+
+* ''usurpation d'expéditeur'' (//sender/from spoofing//): il s'agit d'envoyer un courriel en se faisant passer pour un expéditeur légitime sur un serveur SMTP donné, en forgeant la champ //''From:''// de l'en-tête d'un courriel. Cela sera grandement facilité si le serveur SMTP ne requiert pas d'authentification, mais sinon si le spammeur réussit à trouver ou obtenir les noms d'usager et mot de passe et qu'il n'y a pas de quota d'envoi, il aura le beau jeu;
+
+* ''rétrodiffusion'' (//email backscattering//): c'est une tactique très futée qui exploite une pratique des serveurs de courriel consistant à envoyer un rebond (//rebound//) à l'expéditeur d'un courriel dont le destinataire n'existe pas. P.ex., si jean@abc.com envoie un courriel à patof@def.com, mais que patof@def.com n'existe pas, alors le serveur MX @def.com enverra un message d'erreur à jean@abc.com //avec le message original attaché//. Ce dernier point est important, car c'est la raison de la rétrodiffusion: le spammeur envoie un courriel à usager qu'il sait ne pas exister (p.ex., à djfdgft4736@def.com), et envoie le courriel de manière légitime (le champ //''From:''// contient une adresse légitime); par contre, le spammeur a placé l'adresse du vrai destinataire du pourriel dans le champ //''Reply-To:''// du pourriel, et c'est à cette adresse que sera envoyé le message de rebond contenant le pourriel attaché.&lt;br&gt;&lt;div&gt;
+[img[https://i.imgur.com/cAhMScP.png]]
+&lt;/div&gt;
+
+!! Comment se prémunir?
+
+La première barrière contre les risques de détournement SMTP est de ''bien configurer'' le serveur SMTP. Cela inclut:
+
+* contrôle serré et approprié des accès administrateurs;
+* connexions toujours chiffrées;
+* authentification obligatoire des envois par des clients;
+* refus de relayer des courriels qui n'originent pas du domaine;
+* refus d'envoyer des rebonds à des adresse de retour (//Reply-To)// différentes des adresses d'expédition (//From//) ou aucun rebond du tout.
+
+En plus de ces bonnes pratiques de configuration serveur, diverses stratégies ont été créées au fil des ans pour mettre encore plus de bâtons dans les roues des spammeurs:
+
+* les entrées DNS ''SPF'' (//Sender Policy Framework//): ce sont des entrées DNS de type TXT indiquant, pour un domaine, quels sont les hôtes autorisés à envoyer du courriel pour ce domaine, ce qui empêche l'usurpation d'expéditeur pourvu que le SMTP de destination soit configuré pour tester les entrées //spf//;
+*&gt; Exemple d'entrée DNS //spf// pour le domaine mondomaine.com:&lt;br&gt;`mondomaine.com. 14400 IN TXT &quot;v=spf1 a include:mail.mondomaine.com -all&quot;`&lt;br&gt;  (ici, cela indique que seul le serveur mail.mondomaine.com peut envoyer des courriels depuis des adresses @mondomaine.com)
+
+* le protocole ''DKIM'' (//Domain Keys Identified Mail//): il s'agit d'un protocole de signature de certains éléments de courriels avec clefs asymétriques; la clef privée est connue par le serveur de courriel, et la clef privée est publiée par DNS. Tout comme SPF, ce protocole permet aussi de s'assurer que c'est un serveur légitime du domaine qui a envoyé un courriel pour ce domaine, mais il permet en plus de s'assurer que le contenu n'a pas été manipulé durant le transit;
+
+* le protocole ''DMARC'' (//Domain-based Message Authentication Reporting &amp; Conformance//): il s'agit d'une convention qui se combine à SPF et/ou DMARC par laquelle un opérateur d'un domaine «A» va faire rapport par courriel à un opérateur d'un domaine «B» des traitements SPF et DKIM effectués sur des courriels provenant du domaine «B»; ainsi, l'opérateur du domaine «B» pourra vérifier qu'il n'y a rien de suspect dans les courriels présumément envoyés par son domaine. Pour ce faire, il faudra 1) que le domaine «B» ait une entrée DNS SPF et/ou DKIM, et 2) que le domaine «B» ait une entrée DMARC indiquant à quelle adresse courriel envoyer les rapports. Ce protocole n'a pas d'effet préventif direct sur les spammeurs, mais il peut permettre de repérer des anomalies dans le traitement des courriels d'un domaine et donc permettre de reprérer des cas de détournement.</pre>
 </div>
 <div created="20230129132619428" list="" modified="20230130000454628" tags="[[Semaine 02 - MS SQL Server]]" title="2.01 Introduction">
 <pre>''MS SQL Server'' est le serveur de bases de données de Microsoft.
@@ -9822,6 +9886,20 @@ pre, code {
 &lt;/div&gt;</pre>
 </div>
 <div created="20230403092157920" modified="20230403092203466" tags="[[Table des matières]]" title="Semaine 10">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+
+&lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
+
+&lt;/div&gt;</pre>
+</div>
+<div created="20230411152637083" modified="20230411152641676" tags="[[Table des matières]]" title="Semaine 11">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+
+&lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
+
+&lt;/div&gt;</pre>
+</div>
+<div created="20230403124232520" modified="20230411152611880" tags="[[Table des matières]]" title="Semaine 12">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
 &lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
